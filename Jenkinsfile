@@ -22,7 +22,7 @@ pipeline {
     }
     stage('JAR release') {
       steps {
-        archiveArtifacts(artifacts: 'build/libs/BigAlarm-*.jar', excludes: 'build/libs/BigAlarm-*-sources.jar')
+        archiveArtifacts(artifacts: 'build/libs/bigalarm-*.jar', excludes: 'build/libs/bigalarm-*-sources.jar')
         cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenSuccess: true, cleanWhenUnstable: true, cleanupMatrixParent: true, deleteDirs: true)
       }
     }
