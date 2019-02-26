@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "bigalarm",
+  "name": "BigAlarm",
+  "description": "I love big alarm sound, not you ? This is a mod who add alarm block for making a real alarm system for your reactor or just for intruder.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
-  "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "url": "https://jcs.bfnt.io/",
+  "updateUrl": "https://ci.jcs.bfnt.io/job/BigAlarm/",
+  "authorList": ["JackCarterSmith"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

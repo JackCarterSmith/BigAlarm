@@ -8,6 +8,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
 public class AlarmBlock extends BlockContainer {
+
 	public AlarmBlock() {
 		super(Material.iron);
 		this.setHardness(5.0F);

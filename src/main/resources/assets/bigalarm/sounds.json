@@ -1,0 +1,6 @@
+{
+    "alarm-default": {"category": "master","sounds": [{"name": "alarm-default","stream": true}]},
+    "alarm-sci-fi": {"category": "master","sounds": [{"name": "alarm-sci-fi","stream": true}]},
+	"alarm-mf": {"category": "master","sounds": [{"name": "alarm-mf","stream": true}]},
+	"alarm-buzzer": {"category": "master","sounds": [{"name": "alarm-buzzer","stream": true}]}
+}
