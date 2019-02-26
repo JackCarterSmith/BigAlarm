@@ -17,10 +17,11 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.1"
+version = "0.1.1"
 group= "fr.jcs.bigalarm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "bigalarm"
 
+apply plugin: 'java'
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
