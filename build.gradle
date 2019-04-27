@@ -15,6 +15,14 @@ buildscript {
     }
 }
 
+repositories {
+    jcenter()
+    maven {
+        name="bbm"
+        url="http://api.dmodoomsirius.me/"
+    }
+}
+
 apply plugin: 'forge'
 
 version = "0.1.2"
@@ -28,7 +36,7 @@ targetCompatibility = 1.7
 minecraft {
     version = "1.7.10-10.13.4.1566-1.7.10"
 	replace '${version}', project.version
-	mappings = 'stable_12'
+	mappings = 'snapshot_20140925'
     runDir = "eclipse"
 }
 
@@ -46,6 +54,10 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
 
+	//compile 'com.google.code.findbugs:jsr305:3.0.0'
+	testCompile 'junit:junit:4.11'
+    compile "com.builtbroken.codinglib:CodingLib:0.+"
+    compile "com.builtbroken.minecraftjunit:MinecraftJUnit:1.7.10-0.+:deobf"
 }
 
 processResources

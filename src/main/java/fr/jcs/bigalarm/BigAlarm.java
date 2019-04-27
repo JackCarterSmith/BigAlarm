@@ -13,10 +13,10 @@ import fr.jcs.bigalarm.blocks.AlarmBlock;
 import fr.jcs.bigalarm.proxy.CommonProxy;
 import net.minecraft.block.Block;
 
-@Mod(modid = BigAlarmRefs.MOD_ID, name = BigAlarmRefs.MOD_NAME, version = "@VERSION@", canBeDeactivated = false, dependencies = "")
+@Mod(modid = BigAlarmRefs.MOD_ID, name = BigAlarmRefs.MOD_NAME, version = "@VERSION@", canBeDeactivated = false, dependencies = "required-after:Forge@[10.13.4.1566,)")
 public class BigAlarm {
 	@Instance(BigAlarmRefs.MOD_ID)
-	public static BigAlarm instance;
+	public static BigAlarm instance = new BigAlarm();
 
 	@SidedProxy(clientSide = BigAlarmRefs.PROXY_CLIENT, serverSide = BigAlarmRefs.PROXY_SERVER)
 	public static CommonProxy proxy;

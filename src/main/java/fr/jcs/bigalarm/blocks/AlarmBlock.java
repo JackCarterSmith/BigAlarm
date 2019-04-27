@@ -2,11 +2,15 @@ package fr.jcs.bigalarm.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import fr.jcs.bigalarm.BigAlarm;
 import fr.jcs.bigalarm.BigAlarmRefs;
+import fr.jcs.bigalarm.tileentitys.TileEntityAlarm;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
@@ -23,6 +27,7 @@ public class AlarmBlock extends BlockContainer {
 		this.setUnlocalizedName(BigAlarmRefs.MOD_ID + ":alarmBlock");
 		this.setTextureName(BigAlarmRefs.MOD_ID + ":default");
 		this.setCreativeTab(CreativeTabs.tabDecorations);
+		this.setLightOpacity(15);
 	}
 
 	@Override
@@ -49,6 +54,20 @@ public class AlarmBlock extends BlockContainer {
 	{
 		return side == 1 ? this.iconAlarm : this.blockIcon;
 	}
+	
+	@Override
+	public void breakBlock(World worldIn, int x, int y, int z, Block blockBroken, int meta) {
+		super.breakBlock(worldIn, x, y, z, blockBroken, meta);
+	}
+	
+	@Override
+	public boolean onBlockActivated(World worldIn, int x, int y, int z, EntityPlayer player, int side, float subX, float subY, float subZ) {
+		if (!worldIn.isRemote) {
+			BigAlarm.proxy.openGui(BigAlarmRefs.GUIID_AlarmBlock,worldIn.getTileEntity(x, y, z));
+		}
+		
+		return super.onBlockActivated(worldIn, x, y, z, player, side, subX, subY, subZ);
+	}
     
 	@Override
     public boolean isFullBlock()
@@ -73,7 +92,7 @@ public class AlarmBlock extends BlockContainer {
 
 	@Override
 	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return null;
+		return new TileEntityAlarm();
 	}
 	
 }
