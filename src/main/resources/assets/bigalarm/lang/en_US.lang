@@ -1,1 +1,3 @@
 tile.bigalarm:alarmBlock.name=Alarm
+
+gui.bigalarm.alarmBlock.name=Configuration Panel
