@@ -9,6 +9,7 @@ import fr.jcs.bigalarm.tileentitys.TileEntityAlarm;
 import net.minecraft.client.Minecraft;
 
 public class ClientProxy extends CommonProxy {
+	/*
 	@Override
 	public void registerTileEntities() {
 		//TileEntityIC2ThermoRenderer renderThermalMonitor = new TileEntityIC2ThermoRenderer();
@@ -16,6 +17,7 @@ public class ClientProxy extends CommonProxy {
 		//ClientRegistry.registerTileEntity(shedar.mods.ic2.nuclearcontrol.tileentities.TileEntityThermo.class, "IC2Thermo", renderThermalMonitor);
 		//GameRegistry.registerTileEntity(shedar.mods.ic2.nuclearcontrol.tileentities.TileEntityHowlerAlarm.class, "IC2HowlerAlarm");
 	}
+	*/
 	
 	@Override
 	public void openGui(int id, Object arg) {

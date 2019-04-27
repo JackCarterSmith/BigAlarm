@@ -8,6 +8,7 @@ public class BigAlarmRefs {
 	public static final String PROXY_CLIENT = "fr.jcs.bigalarm.proxy.ClientProxy";
 	public static final String PROXY_SERVER = "fr.jcs.bigalarm.proxy.CommonProxy";
 	public static final boolean isDevEnv = (Boolean)Launch.blackboard.get("fml.deobfuscatedEnvironment");
+	public static final String RESOURCESPREFIX = MOD_ID.toLowerCase() + ":";
 	
 	public static final String GUI = "gui." + MOD_ID + ".";
 	

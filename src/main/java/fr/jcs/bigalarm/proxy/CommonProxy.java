@@ -10,7 +10,7 @@ import net.minecraft.world.World;
 
 public class CommonProxy {
 	public void registerTileEntities() {
-		//GameRegistry.registerTileEntity(TileEntityThermo.class, "IC2Thermo");
+		GameRegistry.registerTileEntity(TileEntityAlarm.class, BigAlarmRefs.MOD_ID + "TileAlarmBlock");
 	}
 	
 	public void openGui(int id, Object arg) {}

@@ -67,4 +67,13 @@ public class TileEntityAlarm extends TileEntity {
 		nbttagcompound.setString("soundName", soundName);
 		nbttagcompound.setInteger("range", range);
 	}
+	
+	/*
+    public String getToolTip(int selector, boolean shift, boolean ctrl) {
+        int i = selector == 0 ? flowRSLow / 100000 * 10000 : flowRSHigh / 100000 * 10000;
+        int b1 = shift ? ctrl ? 10000 + i : 1000 : ctrl ? 5 : 50;
+        int b2 = shift ? ctrl ? 1000 : 100 : ctrl ? 1 : 10;
+        return b1 + "/" + b2 + " RF/t";
+    }
+    */
 }

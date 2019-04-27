@@ -28,6 +28,7 @@ public class BigAlarm {
     public void preInit(FMLInitializationEvent event)
     {
         System.out.println("[BigAlarm]: Making nuut sound...");
+        proxy.registerTileEntities();
     }
     
     @EventHandler
